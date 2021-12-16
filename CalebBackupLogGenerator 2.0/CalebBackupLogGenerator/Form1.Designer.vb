@@ -30,10 +30,6 @@ Partial Class Form1
         Me.SelectBackupLogLabel = New System.Windows.Forms.Label()
         Me.SelectBackupLogBrowseButton = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.SelectLogStartButton = New System.Windows.Forms.Button()
-        Me.SelectLogEndButton = New System.Windows.Forms.Button()
-        Me.LogStartTextBox = New System.Windows.Forms.TextBox()
-        Me.LogEndTextBox = New System.Windows.Forms.TextBox()
         Me.EnterPartDetailsAndCureDeviceNameLabel = New System.Windows.Forms.Label()
         Me.BackupLogTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -47,7 +43,6 @@ Partial Class Form1
         Me.CreateLogLabel = New System.Windows.Forms.Label()
         Me.CreateBackupLogButton = New System.Windows.Forms.Button()
         Me.DataGridViewForSelectedRange = New System.Windows.Forms.DataGridView()
-        Me.DataTableLabel = New System.Windows.Forms.Label()
         CType(Me.DataGridViewForCSV, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridViewForSelectedRange, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -87,9 +82,10 @@ Partial Class Form1
         'BackupLogDataLabel
         '
         Me.BackupLogDataLabel.AutoSize = True
-        Me.BackupLogDataLabel.Location = New System.Drawing.Point(300, 54)
+        Me.BackupLogDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.BackupLogDataLabel.Location = New System.Drawing.Point(303, 54)
         Me.BackupLogDataLabel.Name = "BackupLogDataLabel"
-        Me.BackupLogDataLabel.Size = New System.Drawing.Size(97, 13)
+        Me.BackupLogDataLabel.Size = New System.Drawing.Size(99, 15)
         Me.BackupLogDataLabel.TabIndex = 2
         Me.BackupLogDataLabel.Text = "Backup Log Data: "
         '
@@ -114,57 +110,21 @@ Partial Class Form1
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 144)
+        Me.Label4.Location = New System.Drawing.Point(12, 327)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(165, 13)
+        Me.Label4.Size = New System.Drawing.Size(263, 46)
         Me.Label4.TabIndex = 5
-        Me.Label4.Text = "2. Select Log Start and Log End: "
-        '
-        'SelectLogStartButton
-        '
-        Me.SelectLogStartButton.Enabled = False
-        Me.SelectLogStartButton.Location = New System.Drawing.Point(15, 161)
-        Me.SelectLogStartButton.Name = "SelectLogStartButton"
-        Me.SelectLogStartButton.Size = New System.Drawing.Size(129, 23)
-        Me.SelectLogStartButton.TabIndex = 6
-        Me.SelectLogStartButton.Text = "Select Log Start Row..."
-        Me.SelectLogStartButton.UseVisualStyleBackColor = True
-        '
-        'SelectLogEndButton
-        '
-        Me.SelectLogEndButton.Enabled = False
-        Me.SelectLogEndButton.Location = New System.Drawing.Point(15, 191)
-        Me.SelectLogEndButton.Name = "SelectLogEndButton"
-        Me.SelectLogEndButton.Size = New System.Drawing.Size(129, 23)
-        Me.SelectLogEndButton.TabIndex = 7
-        Me.SelectLogEndButton.Text = "Select Log End Row..."
-        Me.SelectLogEndButton.UseVisualStyleBackColor = True
-        '
-        'LogStartTextBox
-        '
-        Me.LogStartTextBox.Enabled = False
-        Me.LogStartTextBox.Location = New System.Drawing.Point(150, 163)
-        Me.LogStartTextBox.Name = "LogStartTextBox"
-        Me.LogStartTextBox.Size = New System.Drawing.Size(91, 20)
-        Me.LogStartTextBox.TabIndex = 8
-        '
-        'LogEndTextBox
-        '
-        Me.LogEndTextBox.Enabled = False
-        Me.LogEndTextBox.Location = New System.Drawing.Point(150, 193)
-        Me.LogEndTextBox.Name = "LogEndTextBox"
-        Me.LogEndTextBox.Size = New System.Drawing.Size(91, 20)
-        Me.LogEndTextBox.TabIndex = 10
+        Me.Label4.Text = "3.  Click the starting row and highlight to the ending row in the Backup Log Data" &
+    " grid window to select. "
         '
         'EnterPartDetailsAndCureDeviceNameLabel
         '
         Me.EnterPartDetailsAndCureDeviceNameLabel.AutoSize = True
-        Me.EnterPartDetailsAndCureDeviceNameLabel.Location = New System.Drawing.Point(12, 238)
+        Me.EnterPartDetailsAndCureDeviceNameLabel.Location = New System.Drawing.Point(12, 177)
         Me.EnterPartDetailsAndCureDeviceNameLabel.Name = "EnterPartDetailsAndCureDeviceNameLabel"
-        Me.EnterPartDetailsAndCureDeviceNameLabel.Size = New System.Drawing.Size(218, 13)
+        Me.EnterPartDetailsAndCureDeviceNameLabel.Size = New System.Drawing.Size(104, 13)
         Me.EnterPartDetailsAndCureDeviceNameLabel.TabIndex = 11
-        Me.EnterPartDetailsAndCureDeviceNameLabel.Text = "3. Enter Part Details and Cure Device Name:"
+        Me.EnterPartDetailsAndCureDeviceNameLabel.Text = "2. Enter Part Details:"
         '
         'BackupLogTextBox
         '
@@ -177,7 +137,7 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 270)
+        Me.Label6.Location = New System.Drawing.Point(13, 139)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(103, 13)
         Me.Label6.TabIndex = 13
@@ -186,7 +146,7 @@ Partial Class Form1
         'CureDeviceNameTextBox
         '
         Me.CureDeviceNameTextBox.Enabled = False
-        Me.CureDeviceNameTextBox.Location = New System.Drawing.Point(121, 267)
+        Me.CureDeviceNameTextBox.Location = New System.Drawing.Point(121, 136)
         Me.CureDeviceNameTextBox.Name = "CureDeviceNameTextBox"
         Me.CureDeviceNameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CureDeviceNameTextBox.TabIndex = 14
@@ -194,7 +154,7 @@ Partial Class Form1
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(43, 305)
+        Me.Label7.Location = New System.Drawing.Point(43, 209)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 13)
         Me.Label7.TabIndex = 15
@@ -202,8 +162,7 @@ Partial Class Form1
         '
         'PartNumberTextBox
         '
-        Me.PartNumberTextBox.Enabled = False
-        Me.PartNumberTextBox.Location = New System.Drawing.Point(121, 302)
+        Me.PartNumberTextBox.Location = New System.Drawing.Point(121, 206)
         Me.PartNumberTextBox.Name = "PartNumberTextBox"
         Me.PartNumberTextBox.Size = New System.Drawing.Size(100, 20)
         Me.PartNumberTextBox.TabIndex = 16
@@ -211,7 +170,7 @@ Partial Class Form1
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(45, 343)
+        Me.Label8.Location = New System.Drawing.Point(45, 247)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(70, 13)
         Me.Label8.TabIndex = 17
@@ -219,8 +178,7 @@ Partial Class Form1
         '
         'JobNumberTextBox
         '
-        Me.JobNumberTextBox.Enabled = False
-        Me.JobNumberTextBox.Location = New System.Drawing.Point(121, 340)
+        Me.JobNumberTextBox.Location = New System.Drawing.Point(121, 244)
         Me.JobNumberTextBox.Name = "JobNumberTextBox"
         Me.JobNumberTextBox.Size = New System.Drawing.Size(100, 20)
         Me.JobNumberTextBox.TabIndex = 18
@@ -228,7 +186,7 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(36, 380)
+        Me.Label9.Location = New System.Drawing.Point(36, 284)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(79, 13)
         Me.Label9.TabIndex = 19
@@ -236,8 +194,7 @@ Partial Class Form1
         '
         'SerialNumberTextBox
         '
-        Me.SerialNumberTextBox.Enabled = False
-        Me.SerialNumberTextBox.Location = New System.Drawing.Point(121, 377)
+        Me.SerialNumberTextBox.Location = New System.Drawing.Point(121, 281)
         Me.SerialNumberTextBox.Name = "SerialNumberTextBox"
         Me.SerialNumberTextBox.Size = New System.Drawing.Size(100, 20)
         Me.SerialNumberTextBox.TabIndex = 0
@@ -245,20 +202,20 @@ Partial Class Form1
         'CreateLogLabel
         '
         Me.CreateLogLabel.AutoSize = True
-        Me.CreateLogLabel.Location = New System.Drawing.Point(12, 438)
+        Me.CreateLogLabel.Location = New System.Drawing.Point(12, 373)
         Me.CreateLogLabel.Name = "CreateLogLabel"
-        Me.CreateLogLabel.Size = New System.Drawing.Size(74, 13)
+        Me.CreateLogLabel.Size = New System.Drawing.Size(127, 13)
         Me.CreateLogLabel.TabIndex = 20
-        Me.CreateLogLabel.Text = "4. Create Log:"
+        Me.CreateLogLabel.Text = "4. Generate Backup Log:"
         '
         'CreateBackupLogButton
         '
         Me.CreateBackupLogButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.CreateBackupLogButton.Location = New System.Drawing.Point(82, 454)
+        Me.CreateBackupLogButton.Location = New System.Drawing.Point(73, 403)
         Me.CreateBackupLogButton.Name = "CreateBackupLogButton"
-        Me.CreateBackupLogButton.Size = New System.Drawing.Size(115, 53)
+        Me.CreateBackupLogButton.Size = New System.Drawing.Size(122, 53)
         Me.CreateBackupLogButton.TabIndex = 21
-        Me.CreateBackupLogButton.Text = "Create Backup Log"
+        Me.CreateBackupLogButton.Text = "Generate Backup Log"
         Me.CreateBackupLogButton.UseVisualStyleBackColor = True
         '
         'DataGridViewForSelectedRange
@@ -268,28 +225,20 @@ Partial Class Form1
         Me.DataGridViewForSelectedRange.AllowUserToResizeColumns = False
         Me.DataGridViewForSelectedRange.AllowUserToResizeRows = False
         Me.DataGridViewForSelectedRange.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewForSelectedRange.Enabled = False
         Me.DataGridViewForSelectedRange.Location = New System.Drawing.Point(752, 68)
         Me.DataGridViewForSelectedRange.Name = "DataGridViewForSelectedRange"
         Me.DataGridViewForSelectedRange.ReadOnly = True
         Me.DataGridViewForSelectedRange.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridViewForSelectedRange.Size = New System.Drawing.Size(417, 468)
         Me.DataGridViewForSelectedRange.TabIndex = 23
-        '
-        'DataTableLabel
-        '
-        Me.DataTableLabel.AutoSize = True
-        Me.DataTableLabel.Location = New System.Drawing.Point(749, 52)
-        Me.DataTableLabel.Name = "DataTableLabel"
-        Me.DataTableLabel.Size = New System.Drawing.Size(90, 13)
-        Me.DataTableLabel.TabIndex = 24
-        Me.DataTableLabel.Text = "Selected Range: "
+        Me.DataGridViewForSelectedRange.Visible = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1181, 547)
-        Me.Controls.Add(Me.DataTableLabel)
+        Me.ClientSize = New System.Drawing.Size(730, 547)
         Me.Controls.Add(Me.DataGridViewForSelectedRange)
         Me.Controls.Add(Me.CreateBackupLogButton)
         Me.Controls.Add(Me.CreateLogLabel)
@@ -303,10 +252,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.BackupLogTextBox)
         Me.Controls.Add(Me.EnterPartDetailsAndCureDeviceNameLabel)
-        Me.Controls.Add(Me.LogEndTextBox)
-        Me.Controls.Add(Me.LogStartTextBox)
-        Me.Controls.Add(Me.SelectLogEndButton)
-        Me.Controls.Add(Me.SelectLogStartButton)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.SelectBackupLogBrowseButton)
         Me.Controls.Add(Me.SelectBackupLogLabel)
@@ -330,10 +275,6 @@ Partial Class Form1
     Friend WithEvents SelectBackupLogLabel As Label
     Friend WithEvents SelectBackupLogBrowseButton As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents SelectLogStartButton As Button
-    Friend WithEvents SelectLogEndButton As Button
-    Friend WithEvents LogStartTextBox As TextBox
-    Friend WithEvents LogEndTextBox As TextBox
     Friend WithEvents EnterPartDetailsAndCureDeviceNameLabel As Label
     Friend WithEvents BackupLogTextBox As TextBox
     Friend WithEvents Label6 As Label
@@ -348,5 +289,4 @@ Partial Class Form1
     Friend WithEvents CreateBackupLogButton As Button
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents DataGridViewForSelectedRange As DataGridView
-    Friend WithEvents DataTableLabel As Label
 End Class
